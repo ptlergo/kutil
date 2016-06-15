@@ -6,8 +6,10 @@ Create a logs directory in root.
 * /logs/logfile.log
 
 
+
 ### Debug Usage
 * Pass in a string title and a object.
+** Must start project with DEBUG=true node src/your-entry-point
 ```
 const util = require('path/to/lib/util');
 
