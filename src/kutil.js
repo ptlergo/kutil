@@ -1,4 +1,4 @@
-exports.debug = (title, obj) => {
+exports.debug = (title, obj, status) => {
   const moment = require('moment');
   const colors = require('colors');
   const fs = require('fs');
@@ -12,10 +12,10 @@ exports.debug = (title, obj) => {
 
   // This is the payload for the append file function
   const pkg = colors.yellow('[' + time + ']') + ' ' + colors.white(title) +
-  ' ' + colors.gray(utils.format('%j', obj)) + ' ' + seperator;
+  ' ' + colors.gray(utils.format('%j', obj)) + ' ' + colors.blue(status) + seperator;
 
   const pkglog = '[' + time + ']' +
-  ' ' + title + ' ' + utils.format('%j', obj) + seperator;
+  ' ' + title + ' ' + utils.format('%j', obj) + status + seperator;
 
   // if developer passes DEBUG=true it will show logging and will save to log file.
   if (process.env.DEBUG) {

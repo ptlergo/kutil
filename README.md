@@ -13,7 +13,7 @@ Create a logs directory in root.
 ```
 const util = require('path/to/lib/util');
 
-util.debug(title, obj);
+util.debug(title, obj, status);
 ```
 
 ### Log Usage
