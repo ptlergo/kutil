@@ -1,0 +1,12 @@
+{
+  "name": "kutil",
+  "version": "1.0.0",
+  "description": "Debugs objects sent into it.",
+  "main": "src/kutil.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["Utility Tool", "Debug"],
+  "author": "Kevin Tucker",
+  "license": "ISC"
+}
