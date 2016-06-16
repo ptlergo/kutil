@@ -11,5 +11,10 @@
     "Debug"
   ],
   "author": "Kevin Tucker",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "colors": "^1.1.2",
+    "moment": "^2.13.0"
+  }
 }
