@@ -29,7 +29,7 @@ describe('Util Debug Tool', () => {
 
   // Test for the debug tool to make sure it
   // passes the title, object and status to the logfile.log
-  it('Should read the logfile.log file to check if the title, object, and status are there.', (done) => {
+  it('Should read the logfile.log file to check if the title, object, and status are there', (done) => {
     // Open the file with read privileges only, then make it human readable.
     fs.readFile('./logs/logfile.log', 'utf8', (err, data) => {
       if (err) throw err;
