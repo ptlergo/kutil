@@ -15,7 +15,7 @@ const oldFashion = {
 describe('Util Debug Tool', () => {
   // Before test call the debug method to append to the logfile.log file
   before((done) => {
-    util.debug('Old Fashion', oldFashion, 200)
+    util.debug('Old Fashion', oldFashion, 200);
     done();
   });
 
@@ -34,12 +34,11 @@ describe('Util Debug Tool', () => {
     fs.readFile('./logs/logfile.log', 'utf8', (err, data) => {
       if (err) throw err;
       // Check the data to see if it has the data I pass to the debug tool.
-      expect(data).to.have.
-      string('Old Fashion').to.have.
-      string('{"first":"Cherry, Sugar Cube, Bitters,' +
+      expect(data).to.have.string('Old Fashion')
+      expect(data).to.have.string('{"first":"Cherry, Sugar Cube, Bitters,' +
               ' Orange Peel","second":"Muddle","third":"Ice Bourbon,' +
               ' Rye Whiskey","fourth":"Stir and DrinK"}')
-      .to.have.string('200');
+      expect(data).to.have.string('200');
       done();
     });
   });
