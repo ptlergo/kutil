@@ -1,10 +1,9 @@
 const util = require('../src/kutil');
 const expect = require('chai').expect;
-const assert = require('chai').assert;
 const fs = require('fs');
 const async = require('async');
 const sinon = require('sinon');
-const rewire = require('rewire');
+
 // Best cocktail in the world
 // test it out, you will enjoy like it.
 const oldFashion = {
