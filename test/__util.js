@@ -39,10 +39,11 @@ describe('Util Debug Tool', () => {
       async.apply(append, oldFashion),
       read,
     ], (err, result) => {
-        // result now equals 'done'
+      // result now equals 'done'
       result();
     });
     function append(oldFashion, callback) {
+      // Testing the append function of util. It will append a object.
       fs.appendFile('./logs/logfile.log', oldFashion, { flags: 'a' }, (err) => {
         if (err) throw err;
         callback(null, oldFashion)
@@ -53,11 +54,9 @@ describe('Util Debug Tool', () => {
       fs.readFile('./logs/logfile.log', 'utf8', (err, data) => {
         if (err) throw err;
         // Check the data to see if it has the data I pass to the debug tool.
-        // expect(data).to.have.string('Old Fashion')
         expect(data).to.have.string('{"first":"Cherry, Sugar Cube, Bitters,' +
                 ' Orange Peel","second":"Muddle","third":"Ice Bourbon,' +
                 ' Rye Whiskey","fourth":"Stir and DrinK"}')
-        // expect(data).to.have.string('200');
         callback(null, done());
       });
     }

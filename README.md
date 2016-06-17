@@ -9,9 +9,9 @@ Create a logs directory in root.
 
 ### Debug Usage
 * Pass in a string title and a object.
-** Must start project with DEBUG=true node src/your-entry-point
+* Must start project with DEBUG=true node src/your-entry-point
 ```
-const util = require('path/to/lib/util');
+const util = require('kutil');
 
 util.debug(title, obj, status);
 ```
@@ -19,9 +19,9 @@ util.debug(title, obj, status);
 ### Log Usage
 * Pass in title and a second argument you want to log out.
 * Pass in up to 4 arguments including the title.
-** util.log(title, arg, arg1, arg2);
+* util.log(title, arg, arg1, arg2);
 ```
-const util = require('path/to/lib/util');
+const util = require('kutil');
 
 util.log(title, arg);
 ```
