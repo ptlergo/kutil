@@ -24,7 +24,6 @@ exports.debug = (title, obj, status) => {
     console.log(pkg);
     fs.appendFile('logs/logfile.log', pkglog, { flags: 'a' }, (err) => {
       if (err) throw err;
-      console.log(pkglog);
     });
   }
 };

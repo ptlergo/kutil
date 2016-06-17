@@ -13,8 +13,11 @@
   "author": "Kevin Tucker",
   "license": "ISC",
   "devDependencies": {
+    "async": "^2.0.0-rc.6",
     "chai": "^3.5.0",
     "colors": "^1.1.2",
-    "moment": "^2.13.0"
+    "moment": "^2.13.0",
+    "rewire": "^2.5.1",
+    "sinon": "^1.17.4"
   }
 }
