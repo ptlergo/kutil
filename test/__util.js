@@ -26,6 +26,7 @@ describe('Util Debug Tool', () => {
     });
     done();
   })
+  
 
   // Test for the debug tool to make sure it
   // passes the title, object and status to the logfile.log
