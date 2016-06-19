@@ -1,6 +1,6 @@
 {
   "name": "kutil",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Debugs objects sent into it.",
   "main": "src/kutil.js",
   "scripts": {
