@@ -12,10 +12,8 @@ const oldFashion = {
   third: 'Ice Bourbon, Rye Whiskey',
   fourth: 'Stir and DrinK',
 };
-const space = 'space';
 
 describe('Util Debug Tool', () => {
-
   // After the test it will clear out the log file with a empty string.
   after((done) => {
     fs.writeFile('./logs/logfile.log', ' ', (err) => {
@@ -23,12 +21,11 @@ describe('Util Debug Tool', () => {
     });
     console.log.restore();
     done();
-  })
+  });
 
   // Test for the debug tool to make sure it
   // passes the title, object and status to the logfile.log
-  it('Should read the logfile.log file to check if the title, object, and status are there', (done) => {
-
+  it('Should append and read the logfile.log file to check object', (done) => {
     // Counting the console.log. Istanbul is still not counting
     sinon.spy(console, 'log');
     util.debug('Old Fashion', oldFashion, 200);
@@ -46,7 +43,7 @@ describe('Util Debug Tool', () => {
       // Testing the append function of util. It will append a object.
       fs.appendFile('./logs/logfile.log', oldFashion, { flags: 'a' }, (err) => {
         if (err) throw err;
-        callback(null, oldFashion)
+        callback(null, oldFashion);
       });
     }
     function read(callback) {
@@ -56,7 +53,7 @@ describe('Util Debug Tool', () => {
         // Check the data to see if it has the data I pass to the debug tool.
         expect(data).to.have.string('{"first":"Cherry, Sugar Cube, Bitters,' +
                 ' Orange Peel","second":"Muddle","third":"Ice Bourbon,' +
-                ' Rye Whiskey","fourth":"Stir and DrinK"}')
+                ' Rye Whiskey","fourth":"Stir and DrinK"}');
         callback(null, done());
       });
     }
