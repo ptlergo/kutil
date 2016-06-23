@@ -8,7 +8,7 @@ exports.debug = (title, obj, status) => {
   // Time formater
   const time = moment().format('ddd, MM/Do/YY, h:mm:ssa');
 
-  const seperator = '\n--------------\n';
+  const seperator = '\n----------------------------\n';
 
   // This is the payload for the append file function
   const pkg = colors.yellow('[' + time + ']') + ' ' + colors.white(title) +
