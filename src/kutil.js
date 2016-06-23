@@ -32,3 +32,10 @@ exports.log = (title, _arg, _arg1, _arg2) => {
   const pkg = title + ':\t';
   console.log(pkg, _arg);
 };
+
+// version bumping
+exports.bump = (vstring) => {
+  const semver = require('semver');
+
+
+};
