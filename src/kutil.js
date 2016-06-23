@@ -11,7 +11,7 @@ exports.debug = (title, obj, status) => {
   const seperator = '\n----------------------------\n';
 
   // This is the payload for the append file function
-  const pkg = colors.yellow('[' + time + ']') + ' ' + colors.white(title) +
+  const pkg = '\n' + colors.yellow('[' + time + ']') + ' ' + colors.white(title) +
   ' ' + colors.gray(utils.format('%j', obj)) + ' ' + colors.blue(status) + seperator;
 
   const pkglog = '[' + time + ']' +
