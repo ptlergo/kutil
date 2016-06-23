@@ -1,4 +1,4 @@
-# kutil
+#[kutil](https://www.npmjs.com/package/kutil)
 Utility tool to debug and log values passed into it.
 
 ##Install
