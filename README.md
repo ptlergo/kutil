@@ -8,28 +8,28 @@ npm install kutil
 
 ## Getting Started
 Create a logs directory in root.
-* /logs/logfile.log
+`/logs/logfile.log`
 
 ### Debug Usage
-* Run project with the debug mode on.
+Run project with the debug mode on.
 ```
 DEBUG=true node src/your-entry-point
 ```
-* Require the 'kutil' package in file where needed.
+Require the 'kutil' package in file where needed.
 ```javascript
 const util = require('kutil');
 ```
-* Pass in a string `title` and an object within the `debug()` method call.
+Pass in a string `title` and an object within the `debug()` method call.
 ```javascript
 util.debug(title, obj, status);
 ```
 
 ### Log Usage
-* Require the 'kutil' package in file where needed.
+Require the 'kutil' package in file where needed.
 ```javascript
 const util = require('kutil');
 ```
-* Pass in a string `title` and up to-but not limited to-4 arguments into the `log()` method call. The arguments will be logged out.
+Pass in a string `title` and up to-but not limited to-4 arguments into the `log()` method call. The arguments will be logged out.
 ```javascript
 util.log(title, arg, arg1, arg2);
 ```
