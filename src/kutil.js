@@ -36,11 +36,9 @@ exports.log = (title, _arg, _arg1, _arg2) => {
 // version bumping
 exports.bump = (vstring) => {
   const semver = require('semver');
-  // check the string to match v.0.0.0
-  const newVersion = vstring.split('.');
-  const checkString = vstring;
-  console.log(checkString);
-
+  // check the string to match version syntax 0.0.0
+  const cleanString = semver.valid(vstring);
+  
   // increment as a patch
 
 
