@@ -5,7 +5,7 @@ exports.debug = (title, obj, status) => {
   // this will help format the json
   const utils = require('util');
   // for versioning
-  const utils = require('semver');
+  const semver = require('semver');
 
   // Time formater
   const time = moment().format('ddd, MM/Do/YY, h:mm:ssa');
@@ -35,14 +35,15 @@ exports.log = (title, _arg, _arg1, _arg2) => {
   console.log(pkg, _arg);
 };
 
-exports.patch = (title) => {
-  console.log(title + ' patch this mess');
+exports.patch = (tag) => {
+  semver.inc(tag, patch);
 }
 
-exports.major = (title) => {
-  console.log(title + ' major this mess');
+exports.major = (tag) => {
+  semver.inc(tag, major);
 }
 
-exports.minor = (title) => {
-  console.log(title + ' minor this mess');
+
+exports.minor = (tag) => {
+  semver.inc(tag, minor);
 }
