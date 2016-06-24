@@ -5,7 +5,7 @@ exports.debug = (title, obj, status) => {
   // this will help format the json
   const utils = require('util');
   // for versioning
-  const utils = require('semver');
+  const semver = require('semver');
 
   // Time formater
   const time = moment().format('ddd, MM/Do/YY, h:mm:ssa');
