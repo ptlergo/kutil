@@ -33,3 +33,14 @@ Pass in a string `title` and up to-but not limited to-4 arguments into the `log(
 ```javascript
 util.log(title, arg, arg1, arg2);
 ```
+
+###Version Bump Usage
+Using `gulp` the tool can bump either major, minor, or patch.
+
+After importing `package.json` file create a task Using `.patch()`, `.major()`, or `.minor()`.
+```javascript
+const package = ('./package.json')
+gulp.task('patch', ()=> {
+  kutil.patch(package.version);
+});
+```
