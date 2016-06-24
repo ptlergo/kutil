@@ -6,6 +6,12 @@ Utility tool to debug and log values passed into it.
 npm install kutil
 ```
 
+###gulp
+install gulp for version bumping
+```
+npm install -g gulp
+```
+
 ## Getting Started
 Create a logs directory in root.
 `/logs/logfile.log`
