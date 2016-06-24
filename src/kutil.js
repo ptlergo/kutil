@@ -35,16 +35,32 @@ exports.log = (title, _arg, _arg1, _arg2) => {
   console.log(pkg, _arg);
 };
 
-
+// PATCH version bumping
 exports.patch = (tag) => {
-  semver.inc(tag, patch);
-}
+  const semver = require('semver');
 
-exports.major = (tag) => {
-  semver.inc(tag, major);
-}
+  const newPatch = semver.inc(tag, 'patch');
 
+  return newPatch;
 
+};
+
+// MINOR version bumping
 exports.minor = (tag) => {
-  semver.inc(tag, minor);
-}
+  const semver = require('semver');
+
+  const newMinor = semver.inc(tag, 'minor');
+
+  return newMinor;
+
+};
+
+// MINOR version bumping
+exports.major = (tag) => {
+  const semver = require('semver');
+
+  const newMajor = semver.inc(tag, 'major');
+
+  return newMajor;
+
+};
