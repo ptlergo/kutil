@@ -35,14 +35,14 @@ exports.log = (title, _arg, _arg1, _arg2) => {
   console.log(pkg, _arg);
 };
 
-exports.patch = (title) => {
-  console.log(title + ' patch this mess');
+exports.patch = (tag) => {
+  console.log(tag + ' patch this mess');
 }
 
-exports.major = (title) => {
-  console.log(title + ' major this mess');
+exports.major = (tag) => {
+  console.log(tag + ' major this mess');
 }
 
-exports.minor = (title) => {
-  console.log(title + ' minor this mess');
+exports.minor = (tag) => {
+  console.log(tag + ' minor this mess');
 }
