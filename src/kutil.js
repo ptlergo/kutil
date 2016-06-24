@@ -39,9 +39,9 @@ exports.log = (title, _arg, _arg1, _arg2) => {
 exports.patch = (tag) => {
   const semver = require('semver');
 
-  const newPatch = semver.inc(tag, 'patch');
+  let newPatch = semver.inc(tag, 'patch');
 
-  return newPatch;
+  return '\nPATCH BUMP: ' + tag + ' ---> ' + newPatch + '\n';
 
 };
 

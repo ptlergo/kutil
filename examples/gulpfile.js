@@ -4,8 +4,7 @@ const package = require('../package.json');
 
 gulp.task('patch', () => {
   let ver = package.version;
-  console.log('current version -->' + ver);
   ver = kutil.patch(ver);
-  console.log('\nbumped to -->' + ver);
+  console.log(ver);
 
 });
