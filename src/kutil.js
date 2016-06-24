@@ -51,7 +51,7 @@ exports.minor = (tag) => {
 
   const newMinor = semver.inc(tag, 'minor');
 
-  return newMinor;
+  return '\MINOR BUMP: ' + tag + ' ---> ' + newMinor + '\n';
 
 };
 
@@ -61,6 +61,6 @@ exports.major = (tag) => {
 
   const newMajor = semver.inc(tag, 'major');
 
-  return newMajor;
+  return '\nMAJOR BUMP: ' + tag + ' ---> ' + newMajor + '\n';
 
 };
