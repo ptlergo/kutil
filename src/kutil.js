@@ -35,20 +35,16 @@ exports.log = (title, _arg, _arg1, _arg2) => {
   console.log(pkg, _arg);
 };
 
-exports.patch = (tag) => {
-  console.log(' current version v'+tag);
-  const versionCurr = tag.split('.');
-  versionCurr[2]++;
-  const versionPatched = versionCurr.join('.');
-  console.log(' bumped to v'+ versionPatched);
-  return versionPatched;
 
+exports.patch = (tag) => {
+  semver.inc(tag, patch);
 }
 
 exports.major = (tag) => {
-  console.log(tag + ' major this mess');
+  semver.inc(tag, major);
 }
 
+
 exports.minor = (tag) => {
-  console.log(tag + ' minor this mess');
+  semver.inc(tag, minor);
 }
