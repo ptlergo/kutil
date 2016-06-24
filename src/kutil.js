@@ -4,6 +4,8 @@ exports.debug = (title, obj, status) => {
   const fs = require('fs');
   // this will help format the json
   const utils = require('util');
+  // for versioning
+  const utils = require('semver');
 
   // Time formater
   const time = moment().format('ddd, MM/Do/YY, h:mm:ssa');
@@ -33,13 +35,14 @@ exports.log = (title, _arg, _arg1, _arg2) => {
   console.log(pkg, _arg);
 };
 
-// version bumping
-exports.bump = (vstring) => {
-  const semver = require('semver');
-  // check the string to match version syntax 0.0.0
-  const cleanString = semver.valid(vstring);
-  
-  // increment as a patch
+exports.patch = (title) => {
+  console.log(title + ' patch this mess');
+}
 
+exports.major = (title) => {
+  console.log(title + ' major this mess');
+}
 
-};
+exports.minor = (title) => {
+  console.log(title + ' minor this mess');
+}
