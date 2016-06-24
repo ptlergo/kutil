@@ -36,7 +36,13 @@ exports.log = (title, _arg, _arg1, _arg2) => {
 };
 
 exports.patch = (tag) => {
-  console.log(tag + ' patch this mess');
+  console.log(' current version v'+tag);
+  const versionCurr = tag.split('.');
+  versionCurr[2]++;
+  const versionPatched = versionCurr.join('.');
+  console.log(' bumped to v'+ versionPatched);
+  return versionPatched;
+
 }
 
 exports.major = (tag) => {
