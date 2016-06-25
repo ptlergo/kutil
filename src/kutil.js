@@ -35,32 +35,29 @@ exports.log = (title, _arg, _arg1, _arg2) => {
   console.log(pkg, _arg);
 };
 
-// PATCH version bumping
-exports.patch = (tag) => {
+
+/**
+ * @function VERSION BUMP
+ * @param {String} currv: current version number
+ * @param {String} tag: 'major', 'minor', 'patch' keywords
+ * @return {Element} element
+ */
+exports.bump = (currv, tag) => {
   const semver = require('semver');
 
-  let newPatch = semver.inc(tag, 'patch');
+  if (tag === 'major'){
+    let newPatch = semver.inc(currv, tag);
+    return '\nPATCH BUMP: ' + currv + ' ---> ' + newPatch + '\n';
 
-  return '\nPATCH BUMP: ' + tag + ' ---> ' + newPatch + '\n';
+  }else if (tag === 'minor'){
+    let newPatch = semver.inc(currv, tag);
+    return '\nPATCH BUMP: ' + currv + ' ---> ' + newPatch + '\n';
 
-};
+  }else if ( tag === 'patch'){
+    let newPatch = semver.inc(currv, tag);
+    return '\nPATCH BUMP: ' + currv + ' ---> ' + newPatch + '\n';
 
-// MINOR version bumping
-exports.minor = (tag) => {
-  const semver = require('semver');
-
-  const newMinor = semver.inc(tag, 'minor');
-
-  return '\MINOR BUMP: ' + tag + ' ---> ' + newMinor + '\n';
-
-};
-
-// MINOR version bumping
-exports.major = (tag) => {
-  const semver = require('semver');
-
-  const newMajor = semver.inc(tag, 'major');
-
-  return '\nMAJOR BUMP: ' + tag + ' ---> ' + newMajor + '\n';
-
+  }else {
+    return 'error! wrong tag!';
+  };
 };
