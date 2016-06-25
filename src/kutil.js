@@ -16,5 +16,19 @@ exports.debug = (title, obj, status) => {
   const pkglog = '[' + time + ']' +
   ' ' + title + ' ' + utils.format('%j', obj) + status + seperator;
 
+  // check if empty status
+  if (status === null) {
+    console.warn(' STATUS NULL ');
 
+  }else {
+    console.log(' STATUS ' + status);
+  }
+
+  // logging
+  if (process.env.DEBUG) {
+    console.log(pklog);
+  } else {
+    console.error(new Error(' ENV DEBUG is not true!'));
+
+  }
 };
