@@ -1,7 +1,6 @@
 exports.debug = (title, obj, status) => {
   const moment = require('moment');
   const colors = require('colors');
-  const fs = require('fs');
   // this will help format the json
   const utils = require('util');
 
