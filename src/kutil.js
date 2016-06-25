@@ -29,21 +29,3 @@ exports.debug = (title, obj, status) => {
     });
   }
 };
-
-exports.log = (title, _arg, _arg1, _arg2) => {
-  const pkg = title + ':\t';
-  console.log(pkg, _arg);
-};
-
-exports.patch = (tag) => {
-  semver.inc(tag, patch);
-}
-
-exports.major = (tag) => {
-  semver.inc(tag, major);
-}
-
-
-exports.minor = (tag) => {
-  semver.inc(tag, minor);
-}
