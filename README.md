@@ -41,12 +41,12 @@ util.log(title, arg, arg1, arg2);
 ```
 
 ###Version Bump Usage
-Using `gulp` the tool can bump either major, minor, or patch.
 
-After importing `package.json` file create a task Using `.patch()`, `.major()`, or `.minor()`.
+After importing `package.json` file create a task.
+Pass in the version number, and then a string of 'patch', 'minor', 'major' as the 2nd parameter.
 ```javascript
 const package = ('./package.json')
 gulp.task('patch', ()=> {
-  kutil.patch(package.version);
+  kutil.bump(package.version, 'patch');
 });
 ```
